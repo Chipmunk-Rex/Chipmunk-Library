@@ -21,7 +21,8 @@
 >> * Tk_Parent : UI_Toolkit과 관련된 코드들이 상속받는 추상 클래스로,
 >>               Enable될 때 현재 오브젝트에 있는 Document를 자동으로 가져옴
 >> * Tk_Element<> : elementName으로 element를 찾아 변수에 담아줌
->>                  제네릭으로 Element의 타입을 받아옴 (사용 예제 : Tk_Element<Button> O, TK_Element<ScriptableObject> X)
+>>                  제네릭으로 Element의 타입을 받아옴 
+>>                  (사용 예제 : Tk_Element<Button> O, TK_Element<ScriptableObject> X)
 >> * * Tk_Btn : Button을 클릭했을때 onBtnClick 이벤트를 발행 
 >> * * Tk_Display : element의 Display를 끄거나 킬 수 있음
 >> * TK_Document : Document가 보이는걸 설정할 수 있음
@@ -30,5 +31,6 @@
 > ## Utility
 >> * ChipmunkLibrary : 자주 사용하는 기능들을 함수로 구현해놓음
 >> <details>
->> <summary> 내부 함수들</summary>
+>> <summary> ChipmunkLibrary내부 함수들</summary>
+>>> * GetComponentWhenNull<> component 변수가 비어있을때만 getComponent를 해주는 함수
 >> </details>
