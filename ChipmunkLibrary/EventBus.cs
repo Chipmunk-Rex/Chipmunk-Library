@@ -23,10 +23,6 @@ public class EventBus<TEnum> where TEnum : Enum
             eventTable[eventType].RemoveListener(listener);
         }
     }
-    public void Invoke(TEnum eventType)
-    {
-        Publish(eventType);
-    }
     public void Publish(TEnum eventType)
     {
         if (eventTable.ContainsKey(eventType))
