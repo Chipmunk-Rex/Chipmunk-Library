@@ -22,5 +22,8 @@
 >>               Enable될 때 현재 오브젝트에 있는 Document를 자동으로 가져옴
 >> * Tk_Element<> : elementName으로 element를 찾아 변수에 담아줌
 >>                  제네릭으로 Element의 타입을 받아옴 (사용 예제 : Tk_Element<Button> O, TK_Element<ScriptableObject> X)
->> * * Tk_Btn :  
->
+>> * * Tk_Btn : Button을 클릭했을때 onBtnClick 이벤트를 발행 
+>> * * Tk_Display : element의 Display를 끄거나 킬 수 있음
+>> * TK_Document : Document가 보이는걸 설정할 수 있음
+>>                 보이기 시작할때 onShow, 숨겨질 때 onHide 유니티 이벤트를 발행
+>> * TK_Singler : 이 컴포넌트가 달린 게임 오브젝트의 자식에 있는
