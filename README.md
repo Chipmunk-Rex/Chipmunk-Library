@@ -12,14 +12,13 @@
 > <details>
 > <summary> Pool</summary>
 >> * IPoolable : 객체를 Pool에 담기위해 필수로 구현해야하는 인터페이스
->>
->>
+
+
 >> * PoolManager : 경기게임마이스터고 유니티 심화반 방식의 PoolManager
->>
->>
+
 >> ** PoolListSO : PoolManager에서 풀링할 PoolItem들을 보관하는 리스트
->>
->>
+
+
 >> ** PoolItem : PoolManager에서 풀링할 PoolItem
 >>
 >>
