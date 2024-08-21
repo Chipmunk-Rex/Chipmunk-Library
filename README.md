@@ -31,6 +31,6 @@
 > ## Utility
 >> * ChipmunkLibrary : 자주 사용하는 기능들을 함수로 구현해놓음
 >> <details>
->> <summary> ChipmunkLibrary내부 함수들</summary>
+>>> <summary> ChipmunkLibrary내부 함수들</summary>
 >>> * GetComponentWhenNull<> component 변수가 비어있을때만 getComponent를 해주는 함수
 >> </details>
