@@ -34,4 +34,8 @@ public class EventBus<TEnum> where TEnum : Enum
             eventTable[eventType]?.Invoke();
         }
     }
+    public void Invoke(TEnum eventType)
+    {
+        Publish(eventType);
+    }
 }
