@@ -27,3 +27,8 @@
 >> * TK_Document : Document가 보이는걸 설정할 수 있음
 >>                 보이기 시작할때 onShow, 숨겨질 때 onHide 유니티 이벤트를 발행
 >> * TK_Singler : 이 컴포넌트가 달린 게임 오브젝트의 자식에 있는
+> ## Utility
+>> * ChipmunkLibrary : 자주 사용하는 기능들을 함수로 구현해놓음
+>> <details>
+>> <summary> 내부 함수들</summary>
+>> </details>
