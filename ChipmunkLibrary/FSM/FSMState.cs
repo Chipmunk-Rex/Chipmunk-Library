@@ -6,7 +6,7 @@ using Chipmunk.Library;
 
 namespace Chipmunk.Library
 {
-    public abstract class EntityState<TEnumState, TEntity> where TEnumState : Enum where TEntity : IFSMEntity<TEnumState, TEntity>
+    public abstract class FSMState<TEnumState, TEntity> where TEnumState : Enum where TEntity : IFSMEntity<TEnumState, TEntity>
     {
         protected FSMStateMachine<TEnumState, TEntity> stateMachine;
         protected int animHash;
@@ -54,7 +54,7 @@ namespace Chipmunk.Library
         {
 
         }
-        public EntityState(IFSMEntity<TEnumState, TEntity> entity, String animName)
+        public FSMState(IFSMEntity<TEnumState, TEntity> entity, String animName)
         {
             if (animName == "")
                 animHash = 0;

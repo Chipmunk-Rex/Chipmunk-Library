@@ -4,7 +4,7 @@
 
 > ## FSM
 >
-> > - EntityState<,> : 모든 FSM의 State는 이 클래스를 상속받아야함
+> > - FSMState<,> : 모든 FSM의 State는 이 클래스를 상속받아야함
 > >   제네릭으로 State를 정의한 Enum의 타입과 IFSMEntity를 구현한 클래스를 받아옴
 > > - FSMStateMachine<,> : FSMState를 관리해줌
 > >   제네릭은 EntityState와 동일하게 받아옴
