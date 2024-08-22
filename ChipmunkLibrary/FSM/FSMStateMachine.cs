@@ -9,10 +9,10 @@ namespace Chipmunk.Library
 {
     public class FSMStateMachine<TEnumState, TEntity> where TEnumState : Enum where TEntity : IFSMEntity<TEnumState, TEntity>
     {
-        public EntityState<TEnumState, TEntity> CurrentState { get; private set; }
+        public FSMState<TEnumState, TEntity> CurrentState { get; private set; }
         public TEnumState CurrentEnumState { get; private set; }
         public TEntity entity;
-        Dictionary<TEnumState, EntityState<TEnumState, TEntity>> stateDictionary = new();
+        Dictionary<TEnumState, FSMState<TEnumState, TEntity>> stateDictionary = new();
         /// <summary>
         /// 초기화함
         /// </summary>
@@ -41,7 +41,7 @@ namespace Chipmunk.Library
             CurrentEnumState = state;
             CurrentState.EnterState();
         }
-        public void AddState(TEnumState state, EntityState<TEnumState, TEntity> entityState)
+        public void AddState(TEnumState state, FSMState<TEnumState, TEntity> entityState)
         {
             stateDictionary.Add(state, entityState);
         }
