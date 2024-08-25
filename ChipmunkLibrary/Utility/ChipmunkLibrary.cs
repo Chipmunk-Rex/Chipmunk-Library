@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Chipmunk.Library
@@ -15,6 +16,16 @@ namespace Chipmunk.Library
             if (component == null)
                 component = targetCompo.GetComponent<T>();
             return component;
+        }
+        public static T GetNext<T>(T enumValue) where T : Enum
+        {
+            Array array = System.Enum.GetValues(typeof(T));
+            for (int i = 0; i < array.Length - 1; i++)
+            {
+                if (enumValue.Equals(array.GetValue(i)))
+                    return (T)array.GetValue(i + 1);
+            }
+            return (T)array.GetValue(0);
         }
     }
 }
