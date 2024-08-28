@@ -71,8 +71,15 @@ namespace Chipmunk.Library
                 return component;
             }
         }
-        public static T GetComponenetWhenNullChild<T(GameObject gameObject, ref T component) where T : Component
-        public static T GetComponenetWhenNullChild<T(Component targetCompo, ref T component) where T : Component
+        public static T GetComponenetWhenNullChild<T>(GameObject gameObject, ref T component) where T : Component
+        {
+                if (component == null)
+                {
+                    component = GetComponentWithChild<T>(gameObject);
+                }
+                return component;
+        }
+        public static T GetComponenetWhenNullChild<T>(Component targetCompo, ref T component) where T : Component
         {
             if (component == null)
             {
