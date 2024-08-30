@@ -1,4 +1,4 @@
-*.pidb.meta
-*.pdb.meta
-*.mdb.meta
-*.meta
+# *.pidb.meta
+# *.pdb.meta
+# *.mdb.meta
+# *.meta
