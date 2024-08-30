@@ -1,0 +1,12 @@
+{
+    "name": "com.yourcompany.chipmunklibrary",
+    "version": "1.0.0",
+    "displayName": "Chipmunk Library",
+    "description": "A library for Chipmunk utilities.",
+    "unity": "2022.3",
+    "author": {
+      "name": "Chipmunk-Rex",
+      "email": "hswa1005@gmail.com",
+      "url": ""
+    }
+  }
