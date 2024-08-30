@@ -36,7 +36,6 @@ namespace Chipmunk.Library
             else
             {
                 T component = null;
-                Debug.Log(gameObject.name);
                 foreach (Transform child in gameObject.transform)
                 {
                     component = GetComponentWithChild<T>(child.gameObject);
@@ -45,7 +44,6 @@ namespace Chipmunk.Library
                         return component;
                     }
                 }
-                Debug.Log("There is no component in the child");
                 return component;
             }
         }
@@ -58,7 +56,6 @@ namespace Chipmunk.Library
             else
             {
                 T component = null;
-                Debug.Log(parent.name);
                 foreach (Transform child in parent.transform)
                 {
                     component = GetComponentWithChild<T>(child.gameObject);
@@ -67,17 +64,16 @@ namespace Chipmunk.Library
                         return component;
                     }
                 }
-                Debug.Log("There is no component in the child");
                 return component;
             }
         }
         public static T GetComponenetWhenNullChild<T>(GameObject gameObject, ref T component) where T : Component
         {
-                if (component == null)
-                {
-                    component = GetComponentWithChild<T>(gameObject);
-                }
-                return component;
+            if (component == null)
+            {
+                component = GetComponentWithChild<T>(gameObject);
+            }
+            return component;
         }
         public static T GetComponenetWhenNullChild<T>(Component targetCompo, ref T component) where T : Component
         {
@@ -86,6 +82,30 @@ namespace Chipmunk.Library
                 component = GetComponentWithChild<T>(targetCompo);
             }
             return component;
+        }
+        public static T GetComponentWithParent<T>(GameObject gameObject) where T : Component
+        {
+            if (gameObject.TryGetComponent<T>(out T compo))
+            {
+                return compo;
+            }
+            else
+            {
+                T component = null;
+                if (gameObject.transform.parent != null)
+                {
+                    component = GetComponentWithParent<T>(gameObject.transform.parent.gameObject);
+                    if (component != null)
+                    {
+                        return component;
+                    }
+                }
+                return component;
+            }
+        }
+        public static T GetComponentWithParent<T>(Component targetCompo) where T : Component
+        {
+            return GetComponentWithParent<T>(targetCompo.gameObject);
         }
     }
 }

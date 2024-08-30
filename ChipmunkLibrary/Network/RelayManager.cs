@@ -33,7 +33,7 @@ public class RelayManager : MonoSingleton<RelayManager>
 
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
         Debug.Log(AuthenticationService.Instance.Profile);
-        
+
     }
     public async void StartHost(int maxTryConnect)
     {

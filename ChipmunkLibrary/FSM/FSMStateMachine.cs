@@ -7,10 +7,11 @@ using Chipmunk.Library;
 
 namespace Chipmunk.Library
 {
-    public class FSMStateMachine<TEnumState, TEntity> where TEnumState : Enum where TEntity : IFSMEntity<TEnumState, TEntity>
+    [Serializable]
+    public class FSMStateMachine<TEnumState, TEntity>  where TEnumState : Enum where TEntity : IFSMEntity<TEnumState, TEntity>
     {
         public FSMState<TEnumState, TEntity> CurrentState { get; private set; }
-        public TEnumState CurrentEnumState { get; private set; }
+        [field : SerializeField]public TEnumState CurrentEnumState { get; private set; }
         public TEntity entity;
         Dictionary<TEnumState, FSMState<TEnumState, TEntity>> stateDictionary = new();
         /// <summary>
@@ -44,6 +45,11 @@ namespace Chipmunk.Library
         public void AddState(TEnumState state, FSMState<TEnumState, TEntity> entityState)
         {
             stateDictionary.Add(state, entityState);
+        }
+
+        internal void UpdateState()
+        {
+            CurrentState.UpdateState();
         }
     }
 }

@@ -11,6 +11,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using WebSocketSharp;
 enum EnumLobbyEventType
 {
     OnJoinLobby, OnKickedFromLobby, OnLobbyChanged, OnLobbyDataChanged, OnDataChanged, OnLobbyDeleted,
@@ -27,7 +28,7 @@ public class LobbyManager : MonoSingleton<LobbyManager>
     [Header("LobbyEvent")]
 
     [SerializeField] EventBus<EnumLobbyEventType> lobbyEventBus = new EventBus<EnumLobbyEventType>();
-    [SerializeField] public UnityEvent onGameStart;
+    [SerializeField] public UnityEvent onGameConnected;
     [SerializeField] public UnityEvent onJoinLobby;
     private Player player = new Player
     {
@@ -46,7 +47,7 @@ public class LobbyManager : MonoSingleton<LobbyManager>
     protected override void Awake()
     {
         base.Awake();
-        onGameStart.AddListener(() => { SceneManager.LoadScene("InGameScene"); Debug.Log("ming");});
+        onGameConnected.AddListener(() => { SceneManager.LoadScene("InGame"); });
     }
 
     [ContextMenu("로비 생성")]
@@ -77,7 +78,7 @@ public class LobbyManager : MonoSingleton<LobbyManager>
                 Data = new Dictionary<string, DataObject>{
                         // { "JoinCode", new DataObject(DataObject.VisibilityOptions.Member, ) }
                         { "Desc", new DataObject(DataObject.VisibilityOptions.Public, lobbyDesc) },
-                        { "GameMode", new DataObject(DataObject.VisibilityOptions.Public, EnumGameMode.Default.ToString()) },
+                        // { "GameMode", new DataObject(DataObject.VisibilityOptions.Public, EnumGameMode.Default.ToString()) },
                         { "RelayJoinCode", new DataObject(DataObject.VisibilityOptions.Member, null)}
                 }
             };
@@ -103,10 +104,9 @@ public class LobbyManager : MonoSingleton<LobbyManager>
     public async void StartLobby()
     {
         string joinCode = await RelayManager.Instance.Host(10);
-        bool isHostStarted = NetworkManager.Singleton.StartHost();
-        Debug.Log(isHostStarted);
+        bool isHostStarted = !joinCode.IsNullOrEmpty();
         if (isHostStarted)
-            onGameStart?.Invoke();
+            onGameConnected?.Invoke();
 
 
         if (joinCode == null)
@@ -186,9 +186,8 @@ public class LobbyManager : MonoSingleton<LobbyManager>
             bool isClientConnected = await RelayManager.Instance.Client(dictionary[dataName].Value.Value);
             if (isClientConnected)
             {
-                bool isClientStarted = NetworkManager.Singleton.StartClient();
-                if (isClientStarted)
-                    onGameStart?.Invoke();
+                if (isClientConnected)
+                    onGameConnected?.Invoke();
             }
 
         }

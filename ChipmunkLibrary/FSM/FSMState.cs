@@ -9,6 +9,7 @@ namespace Chipmunk.Library
     public abstract class FSMState<TEnumState, TEntity> where TEnumState : Enum where TEntity : IFSMEntity<TEnumState, TEntity>
     {
         protected FSMStateMachine<TEnumState, TEntity> stateMachine;
+        protected TEntity entity {get => stateMachine.entity;}
         protected int animHash;
         /// <summary>
         /// State가 시작될때 호출

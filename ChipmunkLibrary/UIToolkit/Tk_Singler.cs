@@ -10,11 +10,14 @@ public class Tk_Singler : MonoBehaviour
     Tk_Document _CurrentDocument;
     protected void Awake()
     {
-        transform.GetComponentsInChildren<Tk_Document>(_Documents);
+        transform.GetComponentsInChildren<Tk_Document>(true, _Documents);
         foreach (Tk_Document doc in _Documents)
         {
             doc.onShow.AddListener(() => OnShowDocument(doc));
             doc.onHide.AddListener(() => OnHideDocument(doc));
+
+            if (doc.showOnStart)
+                OnShowDocument(doc);
         }
     }
 

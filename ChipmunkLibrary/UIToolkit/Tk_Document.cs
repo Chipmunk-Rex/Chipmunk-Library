@@ -9,7 +9,7 @@ using UnityEngine.UIElements;
 [AddComponentMenu("Chipmunk/Toolkit/Toolkit_Document")]
 public class Tk_Document : TK_Parent
 {
-    [SerializeField] bool showOnStart = false;
+    [SerializeField] public bool showOnStart = false;
     [SerializeField] public UnityEvent onShow;
     [SerializeField] public UnityEvent onHide;
     public List<TK_Parent> tkScripts;
@@ -27,6 +27,8 @@ public class Tk_Document : TK_Parent
     }
     public void Show()
     {
+        if (gameObject.activeSelf == false)
+            gameObject.SetActive(true);
         document.rootVisualElement.style.display = DisplayStyle.Flex;
         onShow?.Invoke();
     }

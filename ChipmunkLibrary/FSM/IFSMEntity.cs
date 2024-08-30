@@ -16,7 +16,7 @@ namespace Chipmunk.Library
         /// <summary>
         /// 본인의 Animator 컴포넌트를 반환, null값이어도 상관없음
         /// </summary>
-        public Animator? Animator { get; }
+        public Animator Animator { get; }
         /// <summary>
         /// State가 변할 수 있는지 반환
         /// </summary>

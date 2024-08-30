@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Chipmunk.Library;
+using Unity.Netcode;
 
 namespace Chipmunk.Library.Network
 {
@@ -55,6 +56,12 @@ namespace Chipmunk.Library.Network
         {
 
         }
+
+        public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter
+        {
+            throw new NotImplementedException();
+        }
+
         public NetworkFSMState(INetworkFSMEntity<TEnumState, TEntity> entity, String animName)
         {
             if (animName == "")
