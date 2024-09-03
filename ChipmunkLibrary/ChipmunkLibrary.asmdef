@@ -1,7 +1,16 @@
 {
-    "name": "DevLab.ChipmunkLibrary",
+    "name": "DevLab.ChipmunkNetwork",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "Unity.Netcode.Components",
+        "Unity.Services",
+        "Unity.Services.Relay",
+        "Unity.Services.Authentication",
+        "Unity.Services.Core",
+        "Unity.Services.Lobbies",
+        "Unity.Netcode.Runtime",
+        "Unity.Networking.Transport"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
