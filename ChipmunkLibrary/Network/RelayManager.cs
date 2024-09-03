@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
+using TMPro;
 using Unity.Netcode;
 using Unity.Netcode.Transports.UTP;
 using Unity.Networking.Transport.Relay;
@@ -20,6 +21,7 @@ public enum RelayType
 
 public class RelayManager : MonoSingleton<RelayManager>
 {
+    public TMP_InputField joinCodeInputField;
     [field: SerializeField] public string joinCode { get; private set; }
     [SerializeField] string sceneName = "MultiGame";
     public RelayType relayType = RelayType.None;
@@ -41,9 +43,9 @@ public class RelayManager : MonoSingleton<RelayManager>
             SceneManager.LoadScene("MultiGame");
         }
     }
-    public async void StartClient(string joinCode)
+    public async void StartClient()
     {
-        if (await Client(joinCode))
+        if (await Client(joinCodeInputField.text))
         {
             SceneManager.activeSceneChanged += StartNetwork;
             SceneManager.LoadScene("MultiGame");
