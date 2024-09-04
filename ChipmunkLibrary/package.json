@@ -1,18 +1,18 @@
 {
-  "name": "com.devlab.chipmunklibrary.network",
-  "version": "1.0.0",
-  "displayName": "Chipmunk Network Library",
-  "description": "A library for Chipmunk network.",
-  "unity": "2022.3",
-  "author": {
-    "name": "Chipmunk-Rex",
-    "email": "hswa1005@gmail.com",
-    "url": ""
-  },
-  "dependencies": {
-    "com.unity.netcode.gameobjects": "1.0.0-preview.1",
-    "com.unity.services.relay": "0.1.0-preview.1",
-    "com.unity.services.lobby": "0.1.0-preview.1",
-    "com.devlab.chipmunklibrary.core": "1.0.0"
+    "name": "com.devlab.chipmunklibrary.network",
+    "version": "1.0.0",
+    "displayName": "Chipmunk Nework",
+    "description": "A library for Chipmunk utilities.",
+    "unity": "2022.3",
+    "author": {
+      "name": "Chipmunk-Rex",
+      "email": "hswa1005@gmail.com",
+      "url": ""
+    },
+    "dependencies": {
+      "com.unity.netcode.gameobjects": "1.0.0-preview.1",
+      "com.unity.services.relay": "0.1.0-preview.1",
+      "com.unity.services.lobby": "0.1.0-preview.1",
+      "com.devlab.chipmunklibrary": "https://github.com/Chipmunk-Rex/Chipmunk-Library.git?path=/ChipmunkLibrary#DefaultLibrary"
+    }
   }
-}

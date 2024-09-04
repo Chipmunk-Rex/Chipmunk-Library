@@ -2,6 +2,7 @@
     "name": "DevLab.ChipmunkNetwork",
     "rootNamespace": "",
     "references": [
+        "Chipmunk.Library",
         "Unity.Netcode.Components",
         "Unity.Services",
         "Unity.Services.Relay",
