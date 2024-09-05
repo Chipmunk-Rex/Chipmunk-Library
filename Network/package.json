@@ -10,9 +10,9 @@
       "url": ""
     },
     "dependencies": {
-      "com.unity.netcode.gameobjects": "1.0.0-preview.1",
-      "com.unity.services.relay": "0.1.0-preview.1",
-      "com.unity.services.lobby": "0.1.0-preview.1",
+      "com.unity.netcode.gameobjects": "1.9.1",
+      "com.unity.services.relay": "1.1.1",
+      "com.unity.services.lobby": "1.2.2",
       "com.devlab.chipmunklibrary": "https://github.com/Chipmunk-Rex/Chipmunk-Library.git?path=/ChipmunkLibrary"
     }
 }
