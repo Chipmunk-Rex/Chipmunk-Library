@@ -7,7 +7,7 @@ using Unity.Netcode;
 
 namespace Chipmunk.Library.Network
 {
-    public abstract class NetworkFSMState<TEnumState, TEntity> where TEnumState : Enum where TEntity : IFSMEntity<TEnumState, TEntity>
+    public abstract class NetworkFSMState<TEnumState, TEntity> where TEnumState : Enum where TEntity : INetworkFSMEntity<TEnumState, TEntity>
     {
         protected NetworkFSMStateMachine<TEnumState, TEntity> stateMachine;
         protected TEntity entity {get => stateMachine.entity;}

@@ -7,7 +7,7 @@ using Chipmunk.Library;
 
 namespace Chipmunk.Library.Network
 {
-    public class NetworkFSMStateMachine<TEnumState, TEntity> where TEnumState : Enum where TEntity : IFSMEntity<TEnumState, TEntity>
+    public class NetworkFSMStateMachine<TEnumState, TEntity> where TEnumState : Enum where TEntity : INetworkFSMEntity<TEnumState, TEntity>
     {
         public NetworkFSMState<TEnumState, TEntity> CurrentState { get; private set; }
         public TEnumState CurrentEnumState { get; private set; }
