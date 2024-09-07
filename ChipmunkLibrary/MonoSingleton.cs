@@ -6,6 +6,19 @@ using UnityEngine;
 public class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour
 {
     [Header("MonoSingleton")]
+    protected abstract static bool CreateOnStart => false; 
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    private static void CreateInstance()
+    {
+        if (CreateOnStart)
+        {
+            if (MonoSingleton<T>._instace == null)
+            {
+                GameObject gameObject = new GameObject(typeof(T).Name);
+                MonoSingleton<T>._instace = gameObject.AddComponent<T>();
+            }
+        }
+    }
     [Tooltip("Dont Destroy on Scene Change")]
     [SerializeField] bool isDontDestroy = false;
     [Space(1)]
