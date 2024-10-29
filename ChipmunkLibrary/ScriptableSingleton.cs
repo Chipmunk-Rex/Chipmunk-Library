@@ -55,8 +55,18 @@ namespace Chipmunk.Library
         }
         protected virtual void OnEnable()
         {
+            Initialize();
+        }
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+        public void Initialize()
+        {
+            if (Instance != null)
+            {
+                Debug.LogWarning("Singleton<" + typeof(T).Name + "> is already set \n maybe you have to destroy it first");
+            }
             Instance = this as T;
         }
+
 
 #if UNITY_EDITOR
     private static T CreateAndSaveInstance()
