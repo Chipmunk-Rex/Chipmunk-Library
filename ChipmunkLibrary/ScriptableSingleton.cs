@@ -47,7 +47,8 @@ namespace Chipmunk.Library
             {
                 if (_instance != null)
                 {
-                    Debug.LogError("Singleton<" + typeof(T).Name + "> is already set \n maybe you have to destroy it first");
+                    if ((Object)Instance != (Object)this)
+                        Debug.LogError("Singleton<" + typeof(T).Name + "> is already set \n maybe you have to destroy it first");
                     return;
                 }
                 _instance = value;
@@ -62,7 +63,8 @@ namespace Chipmunk.Library
         {
             if (Instance != null)
             {
-                Debug.LogWarning("Singleton<" + typeof(T).Name + "> is already set \n maybe you have to destroy it first");
+                if ((Object)Instance != (Object)this)
+                    Debug.LogWarning("Singleton<" + typeof(T).Name + "> is already set \n maybe you have to destroy it first");
             }
             Instance = this as T;
         }
