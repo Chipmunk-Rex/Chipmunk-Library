@@ -21,7 +21,7 @@ public class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour
             {
                 _instace = GameObject.FindAnyObjectByType<T>();
                 if (_instace == null)
-                    throw new Exception("바보같은! 싱글톤이 없어!");
+                    throw new Exception($"MonoSingleton : Cannot Find Singleton Instance");
                 else
                     IsDestroyed = false;
             }
@@ -33,17 +33,15 @@ public class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour
         if (_instace == null)
         {
             _instace = this as T;
-            if (isDontDestroy)
-                DontDestroyOnLoad(gameObject);
         }
         else if (_instace != this)
         {
             Destroy(gameObject);
         }
-        else
-        {
+
+        
+        if (isDontDestroy)
             DontDestroyOnLoad(gameObject);
-        }
     }
     private void OnDisable()
     {
