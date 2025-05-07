@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEngine;
 
 
-namespace Chipmunk.Library
+namespace Chipmunk.Library.Utility
 {
     public class ScriptableSingleton<T> : ScriptableObject where T : ScriptableObject
     {
