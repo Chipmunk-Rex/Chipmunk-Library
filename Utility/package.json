@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "displayName": "Chipmunk Utility",
     "description": "A library for Chipmunk utilities.",
-    "unity": "6000.0.45f",
+    "unity": "6000.0.45",
     "author": {
       "name": "Chipmunk-Rex",
       "email": "hswa1005@gmail.com"
