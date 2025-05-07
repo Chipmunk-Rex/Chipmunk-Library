@@ -1,12 +1,11 @@
 {
-    "name": "com.devlab.chipmunklibrary",
+    "name": "com.devlab.chipmunklibrary.utility",
     "version": "1.0.0",
-    "displayName": "Chipmunk Library",
+    "displayName": "Chipmunk Utility",
     "description": "A library for Chipmunk utilities.",
-    "unity": "2022.3",
+    "unity": "6000.0.45f",
     "author": {
       "name": "Chipmunk-Rex",
-      "email": "hswa1005@gmail.com",
-      "url": ""
+      "email": "hswa1005@gmail.com"
     }
   }
