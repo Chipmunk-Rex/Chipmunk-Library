@@ -1,6 +1,6 @@
 using System;
 
-namespace Chipmunk.Library.Utility
+namespace Chipmunk.Library.Utility.Extensions
 {
     public static class EnumExtension
     {
