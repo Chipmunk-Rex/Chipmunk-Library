@@ -97,23 +97,23 @@ namespace Chipmunk.Library.Utility.RapperValue
         }
         public static Int operator +(Int a, int b)
         {
-            return new Int(a.value + b);
+            return a.value + b;
         }
         public static Int operator -(Int a, int b)
         {
-            return new Int(a.value - b);
+            return a.value - b;
         }
         public static Int operator *(Int a, int b)
         {
-            return new Int(a.value * b);
+            return a.value * b;
         }
         public static Int operator /(Int a, int b)
         {
-            return new Int(a.value / b);
+            return a.value / b;
         }
         public static Int operator %(Int a, int b)
         {
-            return new Int(a.value % b);
+            return a.value % b;
         }
         public static Int operator +(int a, Int b)
         {
