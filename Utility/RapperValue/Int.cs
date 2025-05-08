@@ -2,7 +2,7 @@ namespace Chipmunk.Library.Utility.RapperValue
 {
     public class Int
     {
-        private int value;
+        public int value;
         public Int(int value)
         {
             this.value = value;
