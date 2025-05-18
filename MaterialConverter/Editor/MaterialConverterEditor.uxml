@@ -1,0 +1,21 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Chipmunk-Library/MaterialConverter/Editor/MaterialConverterEditor.uss?fileID=7433441132597879392&amp;guid=dd74772328742d241a6d5c20ea62484a&amp;type=3#MaterialConverterEditor" />
+    <ui:VisualElement name="Header" style="flex-direction: row; flex-shrink: 0; padding-top: 3px; padding-right: 3px; padding-bottom: 3px; padding-left: 3px;">
+        <uie:ObjectField label="Property Mapping" type="Chipmunk_Library.MaterialConverter.PropertyMappingContainer, Assembly-CSharp" allow-scene-objects="false" name="PropertyMappingField" style="flex-grow: 1;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="ButtonContainer" style="flex-shrink: 0;">
+        <ui:Button text="Create New Mapping" name="CreateMapppingBtn" />
+        <ui:Button text="Delete Current Mapping" name="DeleteMappingBtn" />
+        <ui:Button text="Convert All Material" name="ConvertAllBtn" />
+    </ui:VisualElement>
+    <ui:ScrollView name="ScrollView">
+        <Chipmunk_Library.MaterialConverter.Editor.PropertyMappingContainerView name="PropertyMappingContainerView" style="flex-grow: 1; flex-shrink: 0;">
+            <ui:VisualElement name="PropertyLinkContainer" style="flex-grow: 1;" />
+            <ui:VisualElement name="PropertyListView" style="flex-grow: 1; flex-direction: row;">
+                <ui:ScrollView name="SourcePropertyContainer" />
+                <ui:VisualElement name="Split" class="ColumnSpliter" />
+                <ui:ScrollView name="TargetPropertyContainer" />
+            </ui:VisualElement>
+        </Chipmunk_Library.MaterialConverter.Editor.PropertyMappingContainerView>
+    </ui:ScrollView>
+</ui:UXML>

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 936c8513d8004c29a91577caa1e4b2a3, type: 3}
+  m_Name: ShaderPropertyMapper
+  m_EditorClassIdentifier: 
+  sourceShader: {fileID: 4800000, guid: a176945d0e562084691bce8e11084c6a, type: 3}
+  targetShader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  propertyMappings:
+  - sourceType: 4
+    sourceProperty: _MainTex
+    targetProperty: _BaseMap
