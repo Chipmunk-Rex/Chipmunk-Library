@@ -1,0 +1,11 @@
+{
+    "name": "com.devlab.chipmunklibrary.materialconverter",
+    "version": "1.0.0",
+    "displayName": "Chipmunk MaterialConverter",
+    "description": "A library for Chipmunk materialConverter.",
+    "unity": "6000.0",
+    "author": {
+      "name": "Chipmunk-Rex",
+      "email": "hswa1005@gmail.com"
+    }
+  }

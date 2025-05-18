@@ -3,7 +3,7 @@ using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Chipmunk_Library.MaterialConverter.Editor
+namespace Chipmunk.Library.MaterialConverter.Editor
 {
     [UxmlElement]
     public partial class PropertyMappingContainerView : VisualElement

@@ -2,7 +2,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Chipmunk_Library.MaterialConverter.Editor
+namespace Chipmunk.Library.MaterialConverter.Editor
 {
     public class PropertyListView : VisualElement
     {

@@ -1,7 +1,7 @@
 using System;
 using UnityEditor;
 
-namespace Chipmunk_Library.MaterialConverter
+namespace Chipmunk.Library.MaterialConverter.Editor
 {
     [System.Serializable]
     public class PropertyLink

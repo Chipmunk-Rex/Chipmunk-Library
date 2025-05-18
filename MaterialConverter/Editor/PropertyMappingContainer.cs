@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Chipmunk_Library.MaterialConverter
+namespace Chipmunk.Library.MaterialConverter.Editor
 {
     [CreateAssetMenu(fileName = "ShaderPropertyMapper", menuName = "Chipmunk/MaterialConverter/ShaderPropertyMapper")]
     public class PropertyMappingContainer : ScriptableObject

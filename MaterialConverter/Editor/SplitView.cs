@@ -1,6 +1,6 @@
 using UnityEngine.UIElements;
 
-namespace Chipmunk_Library.MaterialConverter.Editor
+namespace Chipmunk.Library.MaterialConverter.Editor
 {
     [UxmlElement]
     public partial class SplitView : TwoPaneSplitView
