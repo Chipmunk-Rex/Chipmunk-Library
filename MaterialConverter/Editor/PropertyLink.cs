@@ -9,5 +9,6 @@ namespace Chipmunk.Library.MaterialConverter.Editor
         public ShaderUtil.ShaderPropertyType sourceType;
         public string sourceProperty;
         public string targetProperty;
+        public object defaultValue;
     }
 }

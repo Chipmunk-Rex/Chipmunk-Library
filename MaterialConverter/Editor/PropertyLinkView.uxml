@@ -6,12 +6,13 @@
         </ui:VisualElement>
         <ui:VisualElement name="Spliter" class="RowSpliter" />
         <ui:VisualElement name="Container" style="flex-grow: 1; flex-direction: row; padding-right: 10px; padding-left: 10px;">
-            <ui:VisualElement name="SourceProperty" style="flex-grow: 1; -unity-text-align: upper-center;">
+            <ui:VisualElement name="DefaultValueField" style="display: none; flex-grow: 1; flex-shrink: 0;" />
+            <ui:VisualElement name="SourceProperty" style="-unity-text-align: upper-center; display: flex; flex-grow: 1;">
                 <ui:Label text="Source Property" name="SourcePropertyName" />
             </ui:VisualElement>
             <ui:VisualElement name="Spliter" class="ColumnSpliter" />
-            <ui:VisualElement name="TargetProperty" style="flex-grow: 1; -unity-text-align: upper-center;">
-                <ui:Label text="Target Property" name="TargetPropertyName" />
+            <ui:VisualElement name="TargetProperty" style="flex-grow: 1; -unity-text-align: upper-center; flex-shrink: 1;">
+                <ui:Label text="Target Property" name="TargetPropertyName" style="display: flex;" />
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>

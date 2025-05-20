@@ -21,6 +21,7 @@
 .RowSpliter {
     background-color: rgb(80, 80, 80);
     height: 1px;
+    flex-shrink: 0;
 }
 
 .ColumnSpliter {
@@ -28,6 +29,7 @@
     background-color: rgb(80, 80, 80);
     margin-left: 10px;
     margin-right: 10px;
+    flex-shrink: 0;
 }
 
 .PropertyListViewContainer {
@@ -53,8 +55,44 @@
     border-top-color: rgb(0, 0, 0);
     border-bottom-color: rgb(0, 0, 0);
     justify-content: space-around;
+    flex-grow: 1;
+    flex-shrink: 0;
 }
 
 .PropertyListView {
     width: 50%;
+    flex-grow: 1;
+}
+
+.container {
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    margin-top: 1px;
+    margin-right: 3px;
+    margin-bottom: 1px;
+    margin-left: 3px;
+}
+
+.drag-hover {
+    border-left-color: rgb(37, 143, 166);
+    border-right-color: rgb(37, 143, 166);
+    border-top-color: rgb(37, 143, 166);
+    border-bottom-color: rgb(37, 143, 166);
 }

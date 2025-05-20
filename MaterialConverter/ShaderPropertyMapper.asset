@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 936c8513d8004c29a91577caa1e4b2a3, type: 3}
   m_Name: ShaderPropertyMapper
   m_EditorClassIdentifier: 
-  sourceShader: {fileID: 4800000, guid: a176945d0e562084691bce8e11084c6a, type: 3}
+  sourceShader: {fileID: 4800000, guid: a9395bfb7a2aaa743a211d427efc468d, type: 3}
   targetShader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   propertyMappings:
+  - sourceType: 2
+    sourceProperty: 
+    targetProperty: _WorkflowMode
   - sourceType: 4
     sourceProperty: _MainTex
     targetProperty: _BaseMap

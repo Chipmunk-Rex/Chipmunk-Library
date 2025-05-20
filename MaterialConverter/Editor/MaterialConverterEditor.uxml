@@ -8,14 +8,5 @@
         <ui:Button text="Delete Current Mapping" name="DeleteMappingBtn" />
         <ui:Button text="Convert All Material" name="ConvertAllBtn" />
     </ui:VisualElement>
-    <ui:ScrollView name="ScrollView">
-        <Chipmunk.Library.MaterialConverter.Editor.PropertyMappingContainerView name="PropertyMappingContainerView" style="flex-grow: 1; flex-shrink: 0;">
-            <ui:VisualElement name="PropertyLinkContainer" style="flex-grow: 1;" />
-            <ui:VisualElement name="PropertyListView" style="flex-grow: 1; flex-direction: row;">
-                <ui:ScrollView name="SourcePropertyContainer" />
-                <ui:VisualElement name="Split" class="ColumnSpliter" />
-                <ui:ScrollView name="TargetPropertyContainer" />
-            </ui:VisualElement>
-        </Chipmunk.Library.MaterialConverter.Editor.PropertyMappingContainerView>
-    </ui:ScrollView>
+    <Chipmunk.Library.MaterialConverter.Editor.PropertyMappingContainerView name="PropertyMappingContainerView" style="flex-grow: 1;" />
 </ui:UXML>

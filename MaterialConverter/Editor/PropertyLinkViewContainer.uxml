@@ -1,0 +1,13 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Label text="Mapped Properties" name="Title" style="-unity-text-align: upper-center;" />
+    <ui:ScrollView name="Container" style="flex-grow: 1;">
+        <ui:Label text="Label" />
+        <ui:Label text="Label" />
+        <ui:Label text="Label" />
+        <ui:Label text="Label" />
+        <ui:Label text="Label" />
+        <ui:Label text="Label" />
+        <ui:Label text="Label" />
+        <ui:Label text="Label" />
+    </ui:ScrollView>
+</ui:UXML>

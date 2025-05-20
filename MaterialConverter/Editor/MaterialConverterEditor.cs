@@ -155,6 +155,8 @@ public class MaterialConverterEditor : EditorWindow
 
                 case ShaderUtil.ShaderPropertyType.TexEnv:
                     return material.GetTexture(propertyLink.sourceProperty);
+                case ShaderUtil.ShaderPropertyType.Int:
+                    return material.GetInt(propertyLink.sourceProperty);
 
                 default:
                     Debug.LogWarning(
@@ -189,6 +191,14 @@ public class MaterialConverterEditor : EditorWindow
         else if (value is Texture texture)
         {
             material.SetTexture(propertyName, texture);
+        }
+        else if (value is int intValue)
+        {
+            material.SetInt(propertyName, intValue);
+        }
+        else
+        {
+            Debug.LogWarning($"Unsupported property type for {propertyName}: {value.GetType()}");
         }
     }
 

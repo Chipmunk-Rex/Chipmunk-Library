@@ -1,5 +1,6 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/Chipmunk-Library/MaterialConverter/Editor/MaterialConverterEditor.uss?fileID=7433441132597879392&amp;guid=dd74772328742d241a6d5c20ea62484a&amp;type=3#MaterialConverterEditor" />
-    <ui:Label text="Label" name="PropertyTypeText" />
-    <ui:Label text="Label" name="PropertyNameText" />
+    <ui:Label text="Label" name="PropertyListTitle" style="-unity-text-align: upper-center;" />
+    <ui:VisualElement name="RowSpliter" class="RowSpliter" style="margin-top: 5px; margin-bottom: 5px;" />
+    <ui:ScrollView name="PropertyListContainer" horizontal-scroller-visibility="Hidden" style="flex-grow: 1;" />
 </ui:UXML>
