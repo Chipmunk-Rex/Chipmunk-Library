@@ -20,8 +20,11 @@ namespace Chipmunk.Library.Utility
             {
                 T before = _value;
                 _value = value;
-                if ((before == null && value != null) || !before.Equals(_value))
+                if ((before == null && value != null) ||
+                    (before != null && !before.Equals(_value)))
+                {
                     OnvalueChanged?.Invoke(before, _value);
+                }
             }
         }
 
