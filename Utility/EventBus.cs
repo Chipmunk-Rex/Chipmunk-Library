@@ -4,34 +4,42 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[Serializable]
-public class EventBus<TEnum> where TEnum : Enum
+namespace Chipmunk.Library.Utility
 {
-    private Dictionary<TEnum, UnityEvent> eventTable = new Dictionary<TEnum, UnityEvent>();
-    public void AddListener(TEnum eventType, UnityAction listener)
+    [Serializable]
+    public class EventBus<TEnum> where TEnum : Enum
     {
-        if (!eventTable.ContainsKey(eventType))
+        private Dictionary<TEnum, UnityEvent> eventTable = new Dictionary<TEnum, UnityEvent>();
+
+        public void AddListener(TEnum eventType, UnityAction listener)
         {
-            eventTable.Add(eventType, new UnityEvent());
+            if (!eventTable.ContainsKey(eventType))
+            {
+                eventTable.Add(eventType, new UnityEvent());
+            }
+
+            eventTable[eventType].AddListener(listener);
         }
-        eventTable[eventType].AddListener(listener);
-    }
-    public void RemoveListener(TEnum eventType, UnityAction listener)
-    {
-        if (eventTable.ContainsKey(eventType))
+
+        public void RemoveListener(TEnum eventType, UnityAction listener)
         {
-            eventTable[eventType].RemoveListener(listener);
+            if (eventTable.ContainsKey(eventType))
+            {
+                eventTable[eventType].RemoveListener(listener);
+            }
         }
-    }
-    public void Publish(TEnum eventType)
-    {
-        if (eventTable.ContainsKey(eventType))
+
+        public void Publish(TEnum eventType)
         {
-            eventTable[eventType]?.Invoke();
+            if (eventTable.ContainsKey(eventType))
+            {
+                eventTable[eventType]?.Invoke();
+            }
         }
-    }
-    public void Invoke(TEnum eventType)
-    {
-        Publish(eventType);
+
+        public void Invoke(TEnum eventType)
+        {
+            Publish(eventType);
+        }
     }
 }

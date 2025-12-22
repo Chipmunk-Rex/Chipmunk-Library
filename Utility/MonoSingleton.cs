@@ -3,48 +3,51 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour
+namespace Chipmunk.Library.Utility
 {
-    [Header("MonoSingleton")]
-    [Tooltip("Dont Destroy on Scene Change")]
-    [SerializeField] bool isDontDestroy = false;
-    [Space(1)]
-    protected static T _instace = null;
-    private static bool IsDestroyed = false;
-    public static T Instance
+    public class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour
     {
-        get
+        [Header("MonoSingleton")]
+        [Tooltip("Dont Destroy on Scene Change")]
+        [SerializeField] bool isDontDestroy = false;
+        [Space(1)]
+        protected static T _instace = null;
+        private static bool IsDestroyed = false;
+        public static T Instance
         {
-            if (IsDestroyed)
-                _instace = null;
+            get
+            {
+                if (IsDestroyed)
+                    _instace = null;
+                if (_instace == null)
+                {
+                    _instace = GameObject.FindAnyObjectByType<T>();
+                    if (_instace == null)
+                        throw new Exception($"MonoSingleton : Cannot Find Singleton Instance");
+                    else
+                        IsDestroyed = false;
+                }
+                return _instace;
+            }
+        }
+        protected virtual void Awake()
+        {
             if (_instace == null)
             {
-                _instace = GameObject.FindAnyObjectByType<T>();
-                if (_instace == null)
-                    throw new Exception($"MonoSingleton : Cannot Find Singleton Instance");
-                else
-                    IsDestroyed = false;
+                _instace = this as T;
             }
-            return _instace;
-        }
-    }
-    protected virtual void Awake()
-    {
-        if (_instace == null)
-        {
-            _instace = this as T;
-        }
-        else if (_instace != this)
-        {
-            Destroy(gameObject);
-        }
+            else if (_instace != this)
+            {
+                Destroy(gameObject);
+            }
 
-        
-        if (isDontDestroy)
-            DontDestroyOnLoad(gameObject);
-    }
-    private void OnDisable()
-    {
-        IsDestroyed = true;
+            
+            if (isDontDestroy)
+                DontDestroyOnLoad(gameObject);
+        }
+        private void OnDisable()
+        {
+            IsDestroyed = true;
+        }
     }
 }
