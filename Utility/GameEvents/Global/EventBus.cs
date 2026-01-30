@@ -1,6 +1,6 @@
-using Chipmunk.Library.Utility.GameEvents;
+using Chipmunk.Library.Utility.GameEvents.Global;
 
-namespace Chipmunk.Library.Utility.GameEvents
+namespace Chipmunk.Library.Utility.GameEvents.Global
 {
     public static class EventBus<T> where T : IEvent
     {
