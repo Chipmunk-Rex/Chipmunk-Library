@@ -14,5 +14,17 @@ namespace Chipmunk.Library.Utility.ComponentContainers
         {
             return component.ComponentContainer.GetComponent<T>(isDerived);
         }
+        public static T GetContainerComponent<T>(this IExcludeContainerComponent component, bool isDerived = false) where T : IContainerComponent
+        {
+            return component.ComponentContainer.GetComponent<T>(isDerived);
+        }
+        public static T GetCompo<T>(this IExcludeContainerComponent component, bool isDerived = false) where T : IContainerComponent
+        {
+            return component.ComponentContainer.GetComponent<T>(isDerived);
+        }
+        public static T Get<T>(this IExcludeContainerComponent component, bool isDerived = false) where T : IContainerComponent
+        {
+            return component.ComponentContainer.GetComponent<T>(isDerived);
+        }
     }
 }
