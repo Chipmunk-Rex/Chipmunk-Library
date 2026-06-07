@@ -24,7 +24,7 @@ namespace Chipmunk.Library.Utility
     {
         [SerializeField]
         private List<SerializableDictionaryItem<TKey, TValue>> serializableItems = new();
-        [SerializeField]
+        // [SerializeField]
         // private List<TKey> keys = new List<TKey>();
         // [SerializeField]
         // private List<TValue> values = new List<TValue>();
