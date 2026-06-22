@@ -1,0 +1,15 @@
+{
+    "name": "com.devlab.chipmunklibrary.modules",
+    "version": "1.0.0",
+    "displayName": "Chipmunk Modules",
+    "description": "A library for Chipmunk modules.",
+    "unity": "6000.0",
+    "author": {
+      "name": "Chipmunk-Rex",
+      "email": "hswa1005@gmail.com"
+    },
+  "dependencies": {
+    "com.devlab.chipmunklibrary.utility" : "https://github.com/Chipmunk-Rex/Chipmunk-Library.git?path=/Utility"
+  }
+  }
+

@@ -1,0 +1,16 @@
+{
+    "name": "DevLab.ChipmunkLibrary.Modules",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ea12c1762e4fdf04588be45a170a32f9"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
