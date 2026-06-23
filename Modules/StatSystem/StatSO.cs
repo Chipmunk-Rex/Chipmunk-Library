@@ -15,8 +15,9 @@ namespace Chipmunk.Modules.StatSystem
         [TextArea] public string description;
 
         [SerializeField] public Sprite icon;
-        [SerializeField] private float baseValue, minValue, maxValue;
-
+        [SerializeField] private float baseValue = 0;
+        [SerializeField] private float minValue = 0;
+        [SerializeField] private float maxValue = int.MaxValue;
         private Dictionary<object, float> _modifyValueByKey = new Dictionary<object, float>();
         private Dictionary<object, float> _modifyPercentByKey = new Dictionary<object, float>();
         private float _modifiedValue = 0;
