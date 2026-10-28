@@ -1,0 +1,18 @@
+{
+    "name": "DevLab.ChipmunkLibrary.Modules.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:a6cad505b68a46c46bd05c2d3f7d574c"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
