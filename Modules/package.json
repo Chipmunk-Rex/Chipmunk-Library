@@ -9,7 +9,7 @@
       "email": "hswa1005@gmail.com"
     },
   "dependencies": {
-    "com.devlab.chipmunklibrary.utility" : "https://github.com/Chipmunk-Rex/Chipmunk-Library.git?path=/Utility"
+    "com.devlab.chipmunklibrary.utility" : "1.0.0"
   }
   }
 
