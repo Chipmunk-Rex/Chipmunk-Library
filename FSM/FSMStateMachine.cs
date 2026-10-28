@@ -22,6 +22,7 @@ namespace Chipmunk.Library
         {
             this.entity = fsmEntity;
             CurrentState = stateDictionary[startState];
+            CurrentEnumState = startState;
             CurrentState.EnterState();
         }
         /// <summary>
